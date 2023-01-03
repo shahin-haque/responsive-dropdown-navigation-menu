@@ -1,0 +1,38 @@
+nav {
+  padding: 20px;
+  position: relative;
+  @include flex-c-jcsb;
+  @include mq-tablet {
+    justify-content: start;
+  }
+  .logo {
+    margin-bottom: -10px;
+  }
+
+  background-color: aqua;
+
+  .menu-wrapper {
+    @include flex-c;
+    width: 100%;
+
+    .menu-icon-wrapper {
+      order: 2;
+      @include mq-tablet {
+        display: none;
+      }
+    }
+    .links-wrapper {
+      @include flex-c;
+      width: 100%;
+
+      //   @include mq-mobile-only {
+      //     display: block;
+      //     position: absolute;
+      //   }
+
+      .login {
+        margin-left: auto;
+      }
+    }
+  }
+}

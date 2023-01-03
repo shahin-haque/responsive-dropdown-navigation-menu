@@ -81,4 +81,42 @@ p {
 }
 .link:hover {
   color: hsl(0deg, 0%, 8%);
+}
+
+nav {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aqua;
+}
+@media screen and (min-width: 47rem) {
+  nav {
+    justify-content: start;
+  }
+}
+nav .logo {
+  margin-bottom: -10px;
+}
+nav .menu-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .menu-wrapper .menu-icon-wrapper {
+  order: 2;
+}
+@media screen and (min-width: 47rem) {
+  nav .menu-wrapper .menu-icon-wrapper {
+    display: none;
+  }
+}
+nav .menu-wrapper .links-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .menu-wrapper .links-wrapper .login {
+  margin-left: auto;
 }/*# sourceMappingURL=globals.css.map */
