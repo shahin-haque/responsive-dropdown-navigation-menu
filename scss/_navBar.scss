@@ -8,31 +8,69 @@ nav {
   .logo {
     margin-bottom: -10px;
   }
-
-  background-color: aqua;
+  .menu-icon {
+    position: relative;
+    z-index: 7;
+    @include mq-tablet {
+      display: none;
+    }
+  }
 
   .menu-wrapper {
     @include flex-c;
     width: 100%;
 
-    .menu-icon-wrapper {
-      order: 2;
-      @include mq-tablet {
-        display: none;
-      }
+    @include mq-mobile-only {
+      background-color: rgba(0, 0, 0, 0.441);
+      display: block;
+      position: absolute;
+      width: 100vw;
+      max-width: 0;
+      overflow: hidden;
+      height: 100vh;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      transition: $transition-main;
     }
+
     .links-wrapper {
       @include flex-c;
       width: 100%;
 
-      //   @include mq-mobile-only {
-      //     display: block;
-      //     position: absolute;
-      //   }
+      @include mq-mobile-only {
+        background-color: $Almost-White;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 60vw;
+        height: 100vh;
+        overflow: hidden;
+        transition: $transition-main;
+        .link:first-of-type {
+          padding-top: 80px;
+        }
+      }
 
       .login {
         margin-left: auto;
+        @include mq-mobile-only {
+          text-align: center;
+        }
+      }
+      .register {
+        padding: 6px 20px;
+        @include mq-mobile-only {
+          text-align: center;
+          margin-inline: 20px;
+        }
       }
     }
+  }
+  .menu-icon[aria-expanded='true'] ~ .menu-wrapper {
+    max-width: 100vw;
   }
 }

@@ -10,8 +10,8 @@ const NavBar = () => {
       <Link href="/">
         <Image className="logo" src={logo} alt="logo" />
       </Link>
+      <ToggleMenu />
       <div className="menu-wrapper">
-        <ToggleMenu />
         <ul className="links-wrapper">
           <li className="link">
             Features
@@ -30,7 +30,7 @@ const NavBar = () => {
           <li className="link login">
             <Link href="/login">Login</Link>
           </li>
-          <li className="link btn">
+          <li className="link btn register">
             <Link href="/register">Register</Link>
           </li>
         </ul>

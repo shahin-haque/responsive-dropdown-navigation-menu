@@ -7,10 +7,10 @@ import iconclosemenu from '../public/icon-close-menu.svg';
 const ToggleMenu = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <span className="menu-icon-wrapper">
+    <>
       {isNavOpen ? (
         <button
-          className="menu-icon-close"
+          className="menu-icon"
           aria-controls="Primary-Navigation"
           aria-expanded="true"
         >
@@ -33,7 +33,7 @@ const ToggleMenu = () => {
           />
         </button>
       )}
-    </span>
+    </>
   );
 };
 
