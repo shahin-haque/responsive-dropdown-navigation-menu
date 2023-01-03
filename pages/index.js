@@ -1,7 +1,9 @@
+import Hero from '../components/Hero';
+
 export default function Home() {
   return (
     <main>
-      <button className="btn-primary">Learn more</button>
+      <Hero />
     </main>
   );
 }

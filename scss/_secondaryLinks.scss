@@ -1,0 +1,54 @@
+.features,
+.company {
+  position: relative;
+  @include mq-tablet {
+    z-index: 10;
+  }
+  & span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.secondary-links {
+  position: absolute;
+  //   width: 100%;
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+  margin-top: 10px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: $transition-main;
+  & img {
+    margin-right: 10px;
+  }
+  & a {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 5px;
+    margin-block: 10px;
+    color: $Medium-Gray;
+    &:hover {
+      color: $Almost-Black;
+    }
+    @include mq-mobile-only {
+      font-size: 16px;
+    }
+  }
+  @include mq-tablet {
+    background-color: white;
+    right: 0;
+  }
+  @include mq-mobile-only {
+    box-shadow: none;
+    position: relative;
+    margin-top: 0px;
+  }
+  &.open {
+    max-height: 400px;
+    padding: 18px;
+  }
+}

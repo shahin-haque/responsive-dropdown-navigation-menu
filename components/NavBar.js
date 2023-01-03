@@ -3,6 +3,8 @@ import React from 'react';
 import ToggleMenu from './ToggleMenu';
 import logo from '../public/logo.svg';
 import Image from 'next/image';
+import FeaturesLinks from './FeaturesLinks';
+import CompanyLinks from './CompanyLinks';
 
 const NavBar = () => {
   return (
@@ -13,14 +15,8 @@ const NavBar = () => {
       <ToggleMenu />
       <div className="menu-wrapper">
         <ul className="links-wrapper">
-          <li className="link">
-            Features
-            <Link href="/features"></Link>
-          </li>
-          <li className="link">
-            Company
-            <Link href="/company"></Link>
-          </li>
+          <FeaturesLinks />
+          <CompanyLinks />
           <li className="link">
             <Link href="/careers">Careers</Link>
           </li>
@@ -40,11 +36,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// Features;
-// Company;
-// Careers;
-// About;
-
-// Login;
-// Register;

@@ -37,7 +37,6 @@ h3 {
 }
 
 img,
-picture,
 svg {
   max-width: 100%;
   height: auto;
@@ -58,7 +57,7 @@ p {
 
 .btn, .btn-primary {
   border: 0.075rem solid hsl(0deg, 0%, 41%);
-  border-radius: 1rem;
+  border-radius: 0.775rem;
   padding: 1em 2.5em;
   color: hsl(0deg, 0%, 41%);
   transition: all 300ms ease-in-out;
@@ -116,6 +115,11 @@ nav .menu-wrapper {
   align-items: center;
   width: 100%;
 }
+@media screen and (min-width: 47rem) {
+  nav .menu-wrapper .link:first-of-type {
+    margin-left: 20px;
+  }
+}
 @media screen and (max-width: 47rem) {
   nav .menu-wrapper {
     background-color: rgba(0, 0, 0, 0.441);
@@ -172,4 +176,130 @@ nav .menu-wrapper .links-wrapper .register {
 }
 nav .menu-icon[aria-expanded=true] ~ .menu-wrapper {
   max-width: 100vw;
+}
+
+.features,
+.company {
+  position: relative;
+}
+@media screen and (min-width: 47rem) {
+  .features,
+.company {
+    z-index: 10;
+  }
+}
+.features span,
+.company span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.secondary-links {
+  position: absolute;
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.175);
+  margin-top: 10px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+.secondary-links img {
+  margin-right: 10px;
+}
+.secondary-links a {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  gap: 5px;
+  margin-block: 10px;
+  color: hsl(0deg, 0%, 41%);
+}
+.secondary-links a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+@media screen and (max-width: 47rem) {
+  .secondary-links a {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 47rem) {
+  .secondary-links {
+    background-color: white;
+    right: 0;
+  }
+}
+@media screen and (max-width: 47rem) {
+  .secondary-links {
+    box-shadow: none;
+    position: relative;
+    margin-top: 0px;
+  }
+}
+.secondary-links.open {
+  max-height: 400px;
+  padding: 18px;
+}
+
+.hero {
+  max-width: 1200px;
+  height: 90vh;
+  margin: auto;
+}
+@media screen and (min-width: 47rem) {
+  .hero {
+    gap: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media screen and (min-width: 47rem) {
+  .hero .bg {
+    order: 2;
+  }
+}
+.hero .info {
+  padding: 10px;
+}
+.hero .info * {
+  padding-block: 10px;
+}
+.hero .info h1 {
+  font-size: 36px;
+}
+@media screen and (min-width: 47rem) {
+  .hero .info h1 {
+    font-size: 82px;
+  }
+}
+.hero .info p {
+  font-size: 16px;
+}
+.hero .info .heroBtn {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-block: 16px;
+}
+@media screen and (min-width: 47rem) {
+  .hero .info .heroBtn {
+    margin-block: 20px;
+  }
+}
+.hero .info .clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (max-width: 47rem) {
+  .hero .info .clients {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 47rem) {
+  .hero .info .clients img {
+    width: 50px;
+  }
 }/*# sourceMappingURL=globals.css.map */

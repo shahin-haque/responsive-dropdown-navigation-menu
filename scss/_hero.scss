@@ -1,0 +1,55 @@
+.hero {
+  max-width: 1200px;
+  height: 90vh;
+  margin: auto;
+  @include mq-tablet {
+    gap: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .bg {
+    @include mq-tablet {
+      order: 2;
+    }
+  }
+  .info {
+    padding: 10px;
+    & * {
+      padding-block: 10px;
+    }
+    h1 {
+      font-size: 36px;
+      @include mq-tablet {
+        font-size: 82px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+
+    .heroBtn {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding-block: 16px;
+      @include mq-tablet {
+        margin-block: 20px;
+      }
+    }
+
+    .clients {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mq-mobile-only {
+        justify-content: center;
+      }
+      gap: 20px;
+      & img {
+        @include mq-mobile-only {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

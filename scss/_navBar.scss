@@ -19,7 +19,11 @@ nav {
   .menu-wrapper {
     @include flex-c;
     width: 100%;
-
+    .link:first-of-type {
+      @include mq-tablet {
+        margin-left: 20px;
+      }
+    }
     @include mq-mobile-only {
       background-color: rgba(0, 0, 0, 0.441);
       display: block;
