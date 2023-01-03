@@ -1,0 +1,49 @@
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+//
+$border-radious: 0.5rem;
+$btn-padding: 0.75rem 1.5rem;
+$btn-border: 0.075rem solid $Medium-Gray;
+$transition-main: all 300ms ease-in-out;
+$padding-link: 0.5rem 1rem;
+//
+$tablet: 47rem;
+$desktop: 89rem;
+//
+p {
+  color: $Medium-Gray;
+  font-size: 1.125rem;
+}
+.btn {
+  border: $btn-border;
+  border-radius: $border-radious;
+  padding: $btn-padding;
+  color: $Medium-Gray;
+  transition: $transition-main;
+
+  &:hover {
+    border-color: $Almost-Black;
+    color: $Almost-Black;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $Almost-Black;
+  color: $Almost-White;
+  font-weight: 700;
+  &:hover {
+    background: transparent;
+  }
+}
+
+.link {
+  color: $Medium-Gray;
+  text-transform: capitalize;
+  transform: $transition-main;
+  padding: $padding-link;
+  &:hover {
+    color: $Almost-Black;
+  }
+}

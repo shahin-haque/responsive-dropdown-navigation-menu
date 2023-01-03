@@ -1,0 +1,36 @@
+// flex-mixins
+@mixin flex-c {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-c-jcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-c-jcsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Media Query mixin mobile only
+
+@mixin mq-mobile-only {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+// Media Query mixin normal
+
+@mixin mq-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin mq-desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
